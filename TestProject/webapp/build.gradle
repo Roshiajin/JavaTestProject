@@ -1,0 +1,44 @@
+group 'WebApp'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+
+buildscript {
+    repositories {
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath "io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE"
+    }
+}
+
+apply plugin: "io.spring.dependency-management"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.springframework/spring-core
+    compile group: 'org.springframework', name: 'spring-core', version: '4.3.2.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version: '4.3.2.RELEASE'
+    compile group: 'org.springframework', name: 'spring-jdbc', version: '4.3.2.RELEASE'
+    compile group: 'org.springframework', name: 'spring-web', version: '4.3.2.RELEASE'
+
+    // https://mvnrepository.com/artifact/com.h2database/h2
+    compile group: 'com.h2database', name: 'h2', version: '1.4.192'
+    //compile group: 'org.jboss.spec.javax.faces', name: 'jboss-jsf-api_2.2_spec', version: '2.2.13'
+    compile 'com.sun.faces:jsf-api:2.2.13'
+    compile 'com.sun.faces:jsf-impl:2.2.13'
+    testCompile group: 'org.springframework', name: 'spring-context', version: '4.3.2.RELEASE'
+    testCompile 'org.springframework:spring-test:4.3.2.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
