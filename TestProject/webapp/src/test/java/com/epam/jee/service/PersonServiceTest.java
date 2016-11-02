@@ -24,18 +24,19 @@ public class PersonServiceTest {
     private PersonService service;
 
     @Autowired
-    private PersonRepository repository;
+    private PersonRepository repositoryOne;
 
     @Test
     public void testRegister() throws Exception {
 
         boolean personIsRegistered = true;
-//        int numberOfPersons = repository.getNumberOfPersons();
+        String someString = "ThisIsString";
+//        int numberOfPersons = repositoryOne.getNumberOfPersons();
 //        Person newPerson = new Person(0L, "Alex", "alex@webapp.com", "12345678904");
 //
 //        service.setNewPerson(newPerson);
 //        service.register();
-//        if (numberOfPersons != repository.getNumberOfPersons()) {
+//        if (numberOfPersons != repositoryOne.getNumberOfPersons()) {
 //            personIsRegistered = true;
 //        }
 
