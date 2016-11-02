@@ -24,12 +24,13 @@ public class PersonServiceTest {
     private PersonService service;
 
     @Autowired
-    private PersonRepository repository;
+    private PersonRepository repositoryTwo;
 
     @Test
     public void testRegister() throws Exception {
 
         boolean personIsRegistered = true;
+        String someNewString = "ThisIsString";
 //        int numberOfPersons = repository.getNumberOfPersons();
 //        Person newPerson = new Person(0L, "Alex", "alex@webapp.com", "12345678904");
 //
