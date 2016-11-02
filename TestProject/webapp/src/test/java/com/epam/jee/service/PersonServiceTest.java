@@ -35,7 +35,7 @@ public class PersonServiceTest {
 //
 //        service.setNewPerson(newPerson);
 //        service.register();
-//        if (numberOfPersons == repository.getNumberOfPersons()) {
+//        if (numberOfPersons != repository.getNumberOfPersons()) {
 //            personIsRegistered = true;
 //        }
 
